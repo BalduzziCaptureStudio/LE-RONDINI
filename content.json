@@ -1,0 +1,410 @@
+{
+  "it": {
+    "meta": {
+      "title": "Le Rondini · Appartamento con terrazza panoramica a Gromo (BG)",
+      "description": "Appartamento di 150 m² a Gromo, in Alta Val Seriana, con terrazza panoramica privata di 50 m². Fino a 6 ospiti, parcheggio gratuito, piste degli Spiazzi di Gromo a circa 15 minuti d'auto."
+    },
+    "ui": {
+      "skip": "Vai al contenuto",
+      "langGroup": "Lingua"
+    },
+    "hero": {
+      "subtitle": "Gromo · Alta Val Seriana",
+      "cta": "Richiedi disponibilità",
+      "alt": "La terrazza privata sotto la tenda verde, con un tavolo apparecchiato, il giardino fiorito e le montagne sullo sfondo"
+    },
+    "intro": {
+      "label": "La casa",
+      "text": "Ampio appartamento di 150 m² a Gromo, a 15 minuti a piedi dal borgo medievale, uno dei borghi più belli d'Italia, con una terrazza panoramica privata di 50 m² affacciata sulla valle e sulle montagne — unica nel paese. Due camere, divano letto in salotto, cucina attrezzata con lavastoviglie, lavatrice e riscaldamento autonomo. Parcheggio gratuito."
+    },
+    "highlights": {
+      "title": "In breve",
+      "items": [
+        "150 m²",
+        "Terrazza panoramica privata di 50 m²",
+        "Fino a 6 ospiti · 2 camere + divano letto",
+        "Piste degli Spiazzi di Gromo a circa 15 min d'auto",
+        "Parcheggio gratuito",
+        "Riscaldamento autonomo"
+      ]
+    },
+    "gallery": {
+      "title": "Le foto",
+      "alts": [
+        "La terrazza lastricata in pietra con la tenda verde, un tavolo con le sedie e la facciata in pietra della casa",
+        "Il glicine in fiore sulla facciata",
+        "Dettaglio del soggiorno: tavolino in vetro con una bottiglia e due calici",
+        "La camera matrimoniale con le lampade da comodino accese",
+        "Il soggiorno con i divani bianchi, il tavolino in vetro e la TV",
+        "Il soggiorno luminoso con parquet, divani bianchi e tappeto",
+        "Il soggiorno con la porta in legno e i divani bianchi",
+        "La cucina con il grande tavolo in legno e le sedie intagliate",
+        "Il bagno con lavabo e box doccia"
+      ]
+    },
+    "space": {
+      "title": "Lo spazio",
+      "paragraphs": [
+        "Le Rondini è una casa di montagna luminosa e spaziosa: un grande soggiorno con divano letto, una camera matrimoniale grande e una camera con due letti singoli e soffitto a volte. Il vero gioiello è la terrazza di 50 m², ideale per colazioni al sole e cene al tramonto con vista sulla montagna. Riscaldamento autonomo per stare al caldo tutto l'inverno.",
+        "Ideale per famiglie e gruppi di amici rispettosi: in inverno le piste degli Spiazzi di Gromo sono a circa 15 minuti d'auto. In estate sentieri, borgo medievale e Cascate del Serio sono facilmente raggiungibili."
+      ],
+      "plan": {
+        "title": "Planimetria di Le Rondini",
+        "desc": "Pianta dell'appartamento: camera matrimoniale, camera con due letti singoli, soggiorno con divano letto, cucina con tavolo per 6, bagno con doccia, disimpegni e un ripostiglio. La terrazza privata di 50 m² si affaccia su soggiorno, cucina e camera matrimoniale. Boiler e lavatrice si trovano nella centrale termica, a cui si accede dal bagno.",
+        "caption": "Planimetria indicativa, non in scala.",
+        "rooms": {
+          "bedroom": "Camera",
+          "twinNote": "2 letti singoli",
+          "doubleNote": "matrimoniale",
+          "sofaBed": "divano letto",
+          "living": "Soggiorno",
+          "kitchen": "Cucina",
+          "bath": "Bagno",
+          "terrace": "Terrazza",
+          "terraceSize": "50 m²",
+          "boiler1": "Centrale",
+          "boiler2": "termica",
+          "boilerUnit": "boiler",
+          "washer": "lavatrice"
+        }
+      },
+      "altTwin": "La camera con due letti singoli e il soffitto a volte",
+      "altBed": "Dettaglio del letto con lenzuola bianche e luce calda"
+    },
+    "seasons": {
+      "winter": {
+        "title": "Inverno",
+        "text": "Neve e sci: le piste degli Spiazzi di Gromo sono a circa 15 minuti d'auto, lungo 7 km di strada di montagna. Al rientro, la casa è calda grazie al riscaldamento autonomo."
+      },
+      "summer": {
+        "title": "Estate",
+        "text": "Sentieri di montagna, il borgo medievale di Gromo e, in estate, le Cascate del Serio. E poi colazioni al sole e cene al tramonto sulla terrazza."
+      },
+      "photos": [
+        "Montagne innevate tra le nuvole",
+        "Una famiglia seduta sui sassi in riva al fiume",
+        "Il fiume tra i boschi, con le montagne innevate sullo sfondo",
+        "Montagne innevate e cielo azzurro tra i rami",
+        "Un prato fiorito e una fila di alberi lungo il fiume",
+        "Un tavolo da picnic sul prato, accanto al fiume",
+        "Un sentiero tra i prati fioriti, con le montagne innevate sullo sfondo",
+        "Un pescatore nel fiume tra i boschi"
+      ]
+    },
+    "know": {
+      "title": "Da sapere",
+      "items": [
+        "All'arrivo verrete accolti di persona dal nostro referente in paese, che vi consegnerà le chiavi.",
+        "Come previsto dalla legge italiana, all'arrivo è richiesto un documento d'identità valido per ogni ospite.",
+        "All'inizio della via c'è un alimentari, raggiungibile a piedi (al ritorno c'è una bella salita, con le borse della spesa conviene l'auto).",
+        "La strada per gli Spiazzi (7 km) è di montagna: in inverno gomme da neve o catene a bordo sono indispensabili.",
+        "Niente feste o eventi. Si può fumare solo in terrazza. Orari di silenzio 22:00–08:00.",
+        "Circa 1h30 d'auto da Milano."
+      ]
+    },
+    "enquiry": {
+      "title": "Richiedi disponibilità",
+      "intro": "Scrivici date e numero di ospiti: la richiesta arriva direttamente a noi.",
+      "requiredNote": "I campi contrassegnati con * sono obbligatori.",
+      "fields": {
+        "name": "Nome e cognome",
+        "email": "Email",
+        "phone": "Telefono (facoltativo)",
+        "arrival": "Arrivo",
+        "departure": "Partenza",
+        "guests": "Numero di ospiti",
+        "message": "Messaggio"
+      },
+      "consent": {
+        "before": "Ho letto l'",
+        "link": "informativa privacy",
+        "after": " e accetto che i miei dati siano usati solo per rispondere a questa richiesta."
+      },
+      "submit": "Invia richiesta",
+      "sending": "Invio in corso…",
+      "error": "Non è stato possibile inviare la richiesta. Riprova oppure scrivici su WhatsApp.",
+      "dateError": "La data di partenza deve essere successiva all'arrivo.",
+      "successTitle": "Grazie, richiesta inviata!",
+      "successText": "Ti risponderemo al più presto all'indirizzo email che ci hai indicato."
+    },
+    "contact": {
+      "whatsappIntro": "Preferisci WhatsApp?",
+      "whatsapp": "Scrivici su WhatsApp",
+      "whatsappMessage": "Ciao! Vorrei informazioni sulla disponibilità di Le Rondini a Gromo.",
+      "airbnbIntro": "Preferisci prenotare con le recensioni e le tutele della piattaforma?",
+      "airbnb": "Prenota su Airbnb"
+    },
+    "privacy": {
+      "title": "Informativa privacy",
+      "paragraphs": [
+        "I dati che invii con il modulo (nome, email, telefono se indicato, date, numero di ospiti e messaggio) sono usati esclusivamente per rispondere alla tua richiesta. Non li cediamo a terzi e non li usiamo per newsletter o pubblicità.",
+        "Il modulo è gestito da Netlify, il servizio che ospita questo sito, che conserva i messaggi per nostro conto. Conserviamo i dati per [PLACEHOLDER: periodo di conservazione, es. 12 mesi] dall'ultimo contatto.",
+        "Titolare del trattamento: [PLACEHOLDER: nome e cognome], [PLACEHOLDER: email]. Puoi chiedere in qualsiasi momento di consultare, correggere o cancellare i tuoi dati scrivendo a questo indirizzo.",
+        "Questo sito non usa cookie né strumenti di tracciamento: ricorda soltanto, nel tuo browser, la lingua che hai scelto. Se ci contatti tramite WhatsApp o Airbnb valgono le loro informative."
+      ]
+    },
+    "lightbox": {
+      "label": "Galleria fotografica",
+      "close": "Chiudi",
+      "prev": "Foto precedente",
+      "next": "Foto successiva",
+      "counter": "{n} / {total}"
+    },
+    "nearby": {
+      "title": "Nei dintorni",
+      "items": [
+        {
+          "type": "Parco avventura",
+          "note": "Percorsi sospesi tra gli alberi, aperti nella bella stagione: date sul sito.",
+          "link": "Sito web"
+        },
+        {
+          "type": "Bar",
+          "link": "Mappa"
+        },
+        {
+          "type": "Trattoria",
+          "link": "Mappa"
+        }
+      ],
+      "tipsTitle": "I nostri consigli"
+    },
+    "gromo": {
+      "eyebrow": "Il borgo medievale",
+      "title": "Gromo",
+      "lead": "Uno dei borghi più belli d'Italia.",
+      "alt": "Il borgo medievale di Gromo visto dall'alto, tra i prati e il fiume",
+      "facts": [
+        "a piedi dal centro del borgo medievale",
+        "d'auto dalle piste degli Spiazzi di Gromo",
+        "d'auto da Milano"
+      ]
+    },
+    "planband": {
+      "title": "La pianta",
+      "lead": "Fino a 6 ospiti: due camere e un divano letto.",
+      "legend": [
+        {
+          "name": "Camera matrimoniale",
+          "desc": "ampia, sulla terrazza"
+        },
+        {
+          "name": "Camera",
+          "desc": "due letti singoli, soffitto a volte"
+        },
+        {
+          "name": "Soggiorno",
+          "desc": "divano letto"
+        },
+        {
+          "name": "Terrazza",
+          "desc": "privata, 50 m²"
+        }
+      ]
+    }
+  },
+  "en": {
+    "meta": {
+      "title": "Le Rondini · Apartment with a panoramic terrace in Gromo, Italy",
+      "description": "A spacious 150 m² apartment in Gromo, Alta Val Seriana (Bergamo), with a private 50 m² panoramic terrace. Sleeps 6, free parking, Spiazzi di Gromo ski slopes about 15 minutes' drive away."
+    },
+    "ui": {
+      "skip": "Skip to content",
+      "langGroup": "Language"
+    },
+    "hero": {
+      "subtitle": "Gromo · Alta Val Seriana",
+      "cta": "Check availability",
+      "alt": "The private terrace under the green awning, with a table set for a meal, flowering plants and the mountains beyond"
+    },
+    "intro": {
+      "label": "The apartment",
+      "text": "A spacious 150 m² apartment in Gromo, a 15-minute walk from the medieval village centre — one of Italy's most beautiful villages — with a private 50 m² panoramic terrace overlooking the valley and mountains, the only one of its kind in the area. Two bedrooms plus a sofa bed, a fully equipped kitchen with dishwasher, washing machine and independent heating. Free parking."
+    },
+    "highlights": {
+      "title": "At a glance",
+      "items": [
+        "150 m²",
+        "Private 50 m² panoramic terrace",
+        "Sleeps 6 · 2 bedrooms + sofa bed",
+        "Spiazzi di Gromo ski slopes ~15 min by car",
+        "Free parking",
+        "Independent heating"
+      ]
+    },
+    "gallery": {
+      "title": "Photos",
+      "alts": [
+        "The stone-paved terrace with the green awning, a table and chairs, and the stone façade of the house",
+        "Wisteria in bloom on the façade",
+        "Living room detail: glass coffee table with a bottle and two glasses",
+        "The double bedroom with the bedside lamps on",
+        "The living room with white sofas, glass coffee table and TV",
+        "The bright living room with parquet floor, white sofas and rug",
+        "The living room with its wooden door and white sofas",
+        "The kitchen with its large wooden table and carved chairs",
+        "The bathroom with washbasin and shower"
+      ]
+    },
+    "space": {
+      "title": "The space",
+      "paragraphs": [
+        "Le Rondini is a bright, spacious mountain home: a large living room with a sofa bed, a large double bedroom and a twin bedroom with a vaulted ceiling. The real gem is the 50 m² terrace — perfect for sunny breakfasts and sunset dinners with mountain views. Independent heating keeps it warm all winter long.",
+        "Ideal for families and respectful groups of friends: in winter, the Spiazzi di Gromo ski slopes are about 15 minutes' drive away. In summer, hiking trails, the medieval village and the Serio Waterfalls are all within easy reach."
+      ],
+      "plan": {
+        "title": "Le Rondini floor plan",
+        "desc": "Apartment floor plan: double bedroom, twin bedroom with two single beds, living room with sofa bed, kitchen with a table for 6, bathroom with shower, hallways and a storage cupboard. The private 50 m² terrace runs along the living room, the kitchen and the double bedroom. The boiler and washing machine are in the boiler room, reached through the bathroom.",
+        "caption": "Indicative floor plan, not to scale.",
+        "rooms": {
+          "bedroom": "Bedroom",
+          "twinNote": "2 single beds",
+          "doubleNote": "double bed",
+          "sofaBed": "sofa bed",
+          "living": "Living",
+          "kitchen": "Kitchen",
+          "bath": "Bath",
+          "terrace": "Terrace",
+          "terraceSize": "50 m²",
+          "boiler1": "Boiler",
+          "boiler2": "room",
+          "boilerUnit": "boiler",
+          "washer": "washer"
+        }
+      },
+      "altTwin": "The twin bedroom with two single beds and a vaulted ceiling",
+      "altBed": "Close-up of the bed with white linen and warm light"
+    },
+    "seasons": {
+      "winter": {
+        "title": "Winter",
+        "text": "Snow and skiing: the Spiazzi di Gromo slopes are about 15 minutes' drive away, up 7 km of mountain road. Back home, independent heating keeps the apartment warm."
+      },
+      "summer": {
+        "title": "Summer",
+        "text": "Mountain trails, Gromo's medieval village and, in summer, the Serio Waterfalls. Then sunny breakfasts and sunset dinners on the terrace."
+      },
+      "photos": [
+        "Snow-covered mountains in the clouds",
+        "A family sitting on the stones by the river",
+        "The river through the woods, with snow-capped mountains beyond",
+        "Snow-capped mountains and blue sky through the branches",
+        "A flowering meadow and a row of trees along the river",
+        "A picnic table on the meadow by the river",
+        "A path through flowering meadows, with snow-capped mountains beyond",
+        "A fisherman standing in the river between wooded banks"
+      ]
+    },
+    "know": {
+      "title": "Good to know",
+      "items": [
+        "On arrival, our local contact will welcome you in person and hand over the keys.",
+        "As required by Italian law, a valid ID is needed for every guest on arrival.",
+        "There's a grocery shop at the start of the street, within walking distance (it's a steep walk back up, so with shopping bags the car is easier).",
+        "The road up to Spiazzi (7 km) is a mountain road: in winter, snow tyres or chains are essential.",
+        "No parties or events. Smoking on the terrace only. Quiet hours 10pm–8am.",
+        "About 1h30 by car from Milan."
+      ]
+    },
+    "enquiry": {
+      "title": "Check availability",
+      "intro": "Send us your dates and the number of guests — your enquiry comes straight to us.",
+      "requiredNote": "Fields marked * are required.",
+      "fields": {
+        "name": "Full name",
+        "email": "Email",
+        "phone": "Phone (optional)",
+        "arrival": "Arrival",
+        "departure": "Departure",
+        "guests": "Number of guests",
+        "message": "Message"
+      },
+      "consent": {
+        "before": "I have read the ",
+        "link": "privacy note",
+        "after": " and agree that my data will be used only to reply to this enquiry."
+      },
+      "submit": "Send enquiry",
+      "sending": "Sending…",
+      "error": "Your enquiry couldn't be sent. Please try again or message us on WhatsApp.",
+      "dateError": "The departure date must be after the arrival date.",
+      "successTitle": "Thank you — your enquiry has been sent!",
+      "successText": "We'll reply as soon as possible to the email address you gave us."
+    },
+    "contact": {
+      "whatsappIntro": "Prefer WhatsApp?",
+      "whatsapp": "Message us on WhatsApp",
+      "whatsappMessage": "Hi! I'd like to check availability at Le Rondini in Gromo.",
+      "airbnbIntro": "Prefer to book with reviews and platform protection?",
+      "airbnb": "Book on Airbnb"
+    },
+    "privacy": {
+      "title": "Privacy note",
+      "paragraphs": [
+        "The details you send with the form (name, email, phone if given, dates, number of guests and message) are used only to reply to your enquiry. We don't share them with third parties or use them for newsletters or advertising.",
+        "The form is handled by Netlify, the service that hosts this website, which stores the messages on our behalf. We keep the data for [PLACEHOLDER: retention period, e.g. 12 months] after our last contact.",
+        "Data controller: [PLACEHOLDER: full name], [PLACEHOLDER: email]. You can ask at any time to see, correct or delete your data by writing to this address.",
+        "This website uses no cookies or tracking tools: it only remembers, in your browser, the language you chose. If you contact us via WhatsApp or Airbnb, their privacy policies apply."
+      ]
+    },
+    "lightbox": {
+      "label": "Photo gallery",
+      "close": "Close",
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "counter": "{n} / {total}"
+    },
+    "nearby": {
+      "title": "Around Gromo",
+      "items": [
+        {
+          "type": "Adventure park",
+          "note": "Treetop courses, open in the warmer months: dates on their website.",
+          "link": "Website"
+        },
+        {
+          "type": "Café-bar",
+          "link": "Map"
+        },
+        {
+          "type": "Trattoria",
+          "link": "Map"
+        }
+      ],
+      "tipsTitle": "Our tips"
+    },
+    "gromo": {
+      "eyebrow": "The medieval village",
+      "title": "Gromo",
+      "lead": "One of Italy's most beautiful villages.",
+      "alt": "Gromo's medieval village from above, between meadows and the river",
+      "facts": [
+        "on foot to the medieval village centre",
+        "by car to the Spiazzi di Gromo ski slopes",
+        "by car from Milan"
+      ]
+    },
+    "planband": {
+      "title": "Floor plan",
+      "lead": "Sleeps 6: two bedrooms and a sofa bed.",
+      "legend": [
+        {
+          "name": "Double bedroom",
+          "desc": "spacious, onto the terrace"
+        },
+        {
+          "name": "Twin bedroom",
+          "desc": "two single beds, vaulted ceiling"
+        },
+        {
+          "name": "Living room",
+          "desc": "sofa bed"
+        },
+        {
+          "name": "Terrace",
+          "desc": "private, 50 m²"
+        }
+      ]
+    }
+  }
+}

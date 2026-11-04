@@ -1,0 +1,802 @@
+/* ==========================================================================
+   Le Rondini — styles
+   Mobile-first. All colours, fonts and spacing are custom properties below.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("fonts/cormorant-garamond-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Jost";
+  src: url("fonts/jost-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  /* Palette — warm off-white, deep forest charcoal, awning green */
+  --bg: #f6f3ed;
+  --bg-alt: #ece7de;
+  --surface: #ffffff;
+  --text: #1c2420;
+  --text-muted: #525b56;
+  --line: #d6cfc2;
+  --line-strong: #7a827d;
+  --accent: #0e6241;          /* deep green of the terrace awning */
+  --accent-dark: #0a4a31;
+  --accent-tint: #d5e7dc;
+  --on-accent: #ffffff;
+  --focus: #0e6241;
+  --error: #a3261b;
+  --footer-bg: #1c2420;
+  --footer-text: #eeeae2;
+  --footer-muted: #bcc2bd;
+  --plan-wall: #1c2420;
+  --plan-room: #ffffff;
+  --plan-other: #dcd6cb;
+
+  /* Type */
+  --font-serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-sans: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Layout */
+  --max: 76rem;
+  --gutter: 1.25rem;
+  --g-gap: 4px;
+  --radius: 2px;
+  --section-y: clamp(4rem, 12vw, 8rem);
+  --header-h: 3.5rem;
+  --radius-photo: 8px;       /* soft photo corners */
+}
+
+@media (min-width: 700px) {
+  :root { --gutter: 2.5rem; --g-gap: 10px; --radius-photo: 12px; }
+}
+
+/* Base ------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+html:has(dialog[open]) { overflow: hidden; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg, picture { display: block; max-width: 100%; }
+img { height: auto; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+}
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--accent-dark); }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icon--lg { width: 2.25rem; height: 2.25rem; }
+
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--max));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  left: 1rem;
+  top: -10rem;
+  padding: 0.75rem 1rem;
+  background: var(--text);
+  color: var(--bg);
+  text-decoration: none;
+}
+.skip-link:focus { top: 1rem; color: var(--bg); }
+
+/* Buttons --------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.75rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn--primary { background: var(--accent); color: var(--on-accent); }
+.btn--primary:hover { background: var(--accent-dark); color: var(--on-accent); }
+.btn--whatsapp { background: transparent; color: var(--accent); border-color: var(--accent); }
+.btn--whatsapp:hover { background: var(--accent); color: var(--on-accent); }
+.btn--block { width: 100%; }
+.btn[disabled] { opacity: 0.65; cursor: progress; }
+
+/* Header ---------------------------------------------------------------- */
+.site-header { background: var(--bg); }
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-h);
+}
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  padding-block: 0.5rem;
+}
+.wordmark:hover { color: var(--text); }
+.lang-switch { display: flex; gap: 0.125rem; margin-right: -0.5rem; }
+.lang-switch button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.5rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+.lang-switch button[aria-pressed="true"] {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
+}
+
+/* 1. Hero --------------------------------------------------------------- */
+/* The photo is never cropped: edge to edge on phones; on larger screens it sits in
+   the same column as the text, aligned with its edges (like the gallery). */
+.hero__media img { width: 100%; height: auto; }
+.hero__body {
+  display: grid;
+  gap: 0.6rem;
+  padding-block: 1.5rem 0.5rem;
+}
+.hero__title {
+  font-size: clamp(3.25rem, 15vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+}
+.hero__subtitle,
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hero__cta { margin-top: 0.9rem; width: 100%; }
+
+@media (min-width: 700px) {
+  .hero__media { width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; }
+  .hero__media img { border-radius: var(--radius-photo); }
+  .hero__body {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "title subtitle" "title cta";
+    align-items: end;
+    column-gap: 3rem;
+    padding-block: 2.25rem 0;
+  }
+  .hero__title { grid-area: title; }
+  .hero__subtitle { grid-area: subtitle; justify-self: end; }
+  .hero__cta { grid-area: cta; width: auto; justify-self: end; margin-top: 0.5rem; }
+}
+
+/* Sections -------------------------------------------------------------- */
+.section { padding-block: var(--section-y); }
+.section--tight { padding-block: clamp(1rem, 4vw, 3rem) var(--section-y); }
+.section--alt { background: var(--bg-alt); }
+.section__title {
+  font-size: clamp(2.375rem, 8vw, 3.75rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.75rem);
+}
+.eyebrow { margin-bottom: 1.25rem; }
+
+/* 2. Intro -------------------------------------------------------------- */
+/* The painted swallows: the wall was flattened to white in the image file, and
+   "multiply" lets the page colour show through, like watercolour on paper.
+   The container's own background keeps this working during the fade-in. */
+.intro__layout { display: grid; gap: 1.25rem; background: var(--bg); }
+.intro__swallows {
+  width: min(80%, 22rem);
+  justify-self: end;
+  margin-top: -1.5rem;
+}
+.intro__swallows img { width: 100%; height: auto; mix-blend-mode: multiply; }
+@media (min-width: 900px) {
+  .intro__layout {
+    grid-template-columns: minmax(0, 44rem) minmax(0, 1fr);
+    align-items: center;
+    column-gap: clamp(2rem, 5vw, 5rem);
+  }
+  .intro__swallows { order: 2; width: 100%; max-width: 32rem; justify-self: center; margin-top: 0; }
+}
+.intro__text {
+  max-width: 44rem;
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4.8vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+/* 3. Highlights --------------------------------------------------------- */
+.highlights__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.highlights__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 0 1.4rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.highlights__list .icon { width: 1.75rem; height: 1.75rem; color: var(--accent); }
+@media (min-width: 900px) {
+  .highlights__list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 3rem; }
+  .highlights__list li { flex-direction: row; align-items: center; gap: 1rem; font-size: 1.0625rem; }
+}
+
+/* 4. Gallery ------------------------------------------------------------ */
+.gallery { padding-top: 0; }
+.gallery__frame { container-type: inline-size; }
+@media (min-width: 700px) {
+  /* same column as the text and the hero photo */
+  .gallery__frame { max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+}
+/* Gallery: 2-column squares on phones; justified rows on computers (no cropping, no gaps) */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--g-gap);
+}
+.gallery__row, .gallery__stack { display: contents; }
+.g { position: relative; --ra: 1; }
+.g::before { content: ""; display: block; padding-top: calc(100% / var(--ra)); }
+.g > .g__link { position: absolute; inset: 0; }
+@media (max-width: 899px) { .g--full-sm { grid-column: span 2; --ra: 1.5; } }   /* phones only */
+.r-land { --r: 1.4995; }   /* photo shapes (width / height); the CSP forbids inline styles, so these are classes */
+.r-43 { --r: 1.3333; }
+.r-sq { --r: 1; }
+.r-port { --r: 0.6669; }
+.g__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-photo);
+  background: var(--bg-alt);
+}
+.g__link picture, .g__link img { width: 100%; height: 100%; }
+.g__link img { object-fit: cover; }
+.g__link:focus-visible { outline-offset: -3px; outline-color: var(--surface); box-shadow: inset 0 0 0 6px var(--focus); }
+@media (prefers-reduced-motion: no-preference) {
+  .g__link img { transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .g__link:hover img { transform: scale(1.025); }
+}
+@media (min-width: 900px) {
+  .gallery__grid { display: flex; flex-direction: column; }
+  .gallery__row { display: flex; gap: var(--g-gap); }
+  .gallery__row > .g { flex: var(--r) 1 0%; min-width: 0; --ra: var(--r); }   /* same height, width follows the photo's shape */
+  .gallery__row--feature { display: grid; grid-template-columns: 2fr 1fr; }    /* the big photo + two stacked */
+  .gallery__stack { display: grid; grid-template-rows: 1fr 1fr; gap: var(--g-gap); }
+  .gallery__stack > .g::before { display: none; }
+}
+
+/* 5. The space + floor plan --------------------------------------------- */
+/* Lo spazio: text + twin room on the left, the bed detail on the right (both open in the lightbox) */
+.space__layout { display: grid; gap: 2.5rem; }
+.space__text p { max-width: 36rem; }
+.space__photo .g__link { height: auto; }
+.space__photo img { width: 100%; height: auto; }
+.space__photo--small { margin-top: 2rem; }
+.space__photo--side { width: 75%; justify-self: end; }
+@media (min-width: 900px) {
+  .space__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 28rem);
+    align-items: start;
+    column-gap: clamp(3rem, 8vw, 8rem);
+  }
+  .space__photo--small { width: min(100%, 26rem); margin-top: 3rem; }
+  .space__photo--side { width: 100%; }
+}
+
+/* 5a. Floor plan band: darker background, "where you sleep" legend + the plan */
+.planband__layout { display: grid; gap: 2.5rem; align-items: center; }
+.planband__lead { max-width: 28rem; margin-bottom: 1.75rem; }
+.legend { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-strong); }
+.legend li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.9rem 0 0.9rem 2.1rem;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+.legend li::before {                /* same tint as beds and terrace on the plan */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: var(--accent-tint);
+  border: 2px solid var(--plan-wall);
+  border-radius: 2px;
+}
+.legend__name { font-weight: 500; }
+.legend__desc { color: var(--text-muted); font-size: 0.9375rem; }
+.plan { margin: 0; }
+@media (min-width: 900px) {
+  .planband__layout { grid-template-columns: minmax(0, 24rem) minmax(0, 1fr); column-gap: clamp(3rem, 8vw, 7rem); }
+  .plan { max-width: 44rem; justify-self: center; width: 100%; }
+}
+.plan__svg { width: 100%; height: auto; }
+.plan__terrace { fill: var(--accent-tint); }
+.plan__parapet { fill: none; stroke: var(--plan-wall); stroke-width: 10; stroke-linejoin: miter; }
+.plan__wall { fill: var(--plan-wall); }
+.plan__other { fill: var(--plan-other); }
+.plan__room path, .plan__window path { fill: var(--plan-room); }
+.plan__line path { fill: none; stroke: var(--plan-wall); stroke-width: 3; }
+.plan__label text {
+  fill: var(--text);
+  font-family: var(--font-sans);
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-anchor: middle;
+  text-transform: uppercase;
+}
+.plan__label .plan__label--sm { font-size: 34px; }
+.plan__label .plan__label--lg {
+  font-family: var(--font-serif);
+  font-size: 84px;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+  fill: var(--accent-dark);
+}
+.plan__label .plan__label--muted { font-size: 30px; fill: var(--text-muted); }
+.plan__label .plan__note {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  fill: var(--accent-dark);
+}
+/* sleeping places are tinted green; other furniture is outlined only */
+.plan__bed rect, .plan__furniture rect, .plan__fixture rect { stroke: var(--plan-wall); stroke-width: 3; }
+.plan__bed rect { fill: var(--accent-tint); }
+.plan__bed .plan__pillow, .plan__furniture rect { fill: var(--plan-room); }
+.plan__fixture rect { fill: none; }
+.plan__bed path, .plan__furniture path, .plan__fixture path,
+.plan__fixture circle { fill: none; stroke: var(--plan-wall); stroke-width: 3; }
+.plan__furniture circle, .plan__furniture ellipse { fill: var(--plan-room); stroke: var(--plan-wall); stroke-width: 3; }
+.plan__space { fill: var(--plan-room); }
+.plan__label .plan__label--xs { font-size: 30px; }
+.plan__label .plan__tiny {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+@media (max-width: 699px) {
+  /* a little wider than the text column on phones, so labels stay legible */
+  .plan__svg { width: calc(100% + var(--gutter)); max-width: none; margin-inline: calc(-0.5 * var(--gutter)); }
+}
+.plan figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* 5b. Gromo: its own section ----------------------------------------------- */
+.gromo { padding-top: 0; }
+.gromo__title {
+  font-size: clamp(3.25rem, 12vw, 6rem);
+  line-height: 0.95;
+  margin-bottom: 0.9rem;
+}
+.gromo__lead {
+  max-width: 44rem;
+  margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4.8vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.gromo__photo { height: auto; }
+.gromo__photo img { height: auto; }
+.gromo__facts {
+  display: grid;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.gromo__facts li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.gromo__value {
+  flex: none;
+  min-width: 6.5rem;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--accent-dark);
+}
+.gromo__label { font-size: 1rem; line-height: 1.4; }
+@media (min-width: 700px) {
+  .gromo__facts { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 2.5rem; margin-top: 2rem; border-bottom: 1px solid var(--line); }
+  .gromo__facts li { flex-direction: column; align-items: flex-start; gap: 0.5rem; padding: 1.5rem 0; border-bottom: 0; }
+  .gromo__value { font-size: 2.75rem; min-width: 0; }
+}
+
+/* 6. Around Gromo: season cards (photo on top), photo grid, tips ------- */
+.seasons__grid { display: grid; gap: 1rem; }
+.season { background: var(--bg); border-radius: var(--radius-photo); overflow: hidden; }
+.season .g__link { height: auto; aspect-ratio: 4 / 3; border-radius: 0; }
+.season__photo--low img { object-position: 50% 75%; } /* keep the people by the river in frame */
+.season__body { padding: 1.5rem 1.5rem 1.75rem; }
+.season .icon { color: var(--accent); }
+.season h3 { font-size: 2.125rem; margin: 1rem 0 0.75rem; }
+.season p { margin: 0; }
+
+.seasons__photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.seasons__photos .g__link { aspect-ratio: 1 / 1; }
+.seasons__photos li:first-child { grid-column: span 2; }           /* the large tile */
+.seasons__photos li:first-child .g__link { height: auto; }
+.seasons__photos li:last-child { grid-column: span 2; }            /* phones: the fisherman fills the last row */
+.seasons__photos li:last-child .g__link { aspect-ratio: 3 / 2; }
+.seasons__photos li:last-child img { object-position: 56% 50%; }  /* keep him in frame when cropped square */
+
+@media (min-width: 700px) {
+  .seasons__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .season__body { padding: 2rem 2.25rem 2.25rem; }
+  .seasons__photos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .seasons__photos li:first-child { grid-row: span 2; }
+  .seasons__photos li:last-child { grid-column: auto; }
+  .seasons__photos li:last-child .g__link { aspect-ratio: 1 / 1; }
+}
+
+.nearby__title { font-size: clamp(2rem, 5vw, 2.75rem); margin: clamp(3.5rem, 8vw, 5.5rem) 0 1.5rem; }
+.nearby__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.place { padding: 1.5rem 0 1.25rem; border-bottom: 1px solid var(--line); }
+.place__meta {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.place__name { font-size: clamp(1.75rem, 4.5vw, 2.125rem); margin-bottom: 0.4rem; }
+.place__note { margin: 0; font-size: 0.9375rem; color: var(--text-muted); }
+@media (min-width: 900px) {
+  .nearby__list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 3rem; border-bottom: 1px solid var(--line); }
+  .place { border-bottom: 0; padding-bottom: 1.5rem; }
+}
+
+/* 7. Good to know ------------------------------------------------------- */
+.know__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+  counter-reset: know;
+}
+.know__list li {
+  position: relative;
+  padding: 1.25rem 0 1.25rem 2.75rem;
+  border-bottom: 1px solid var(--line);
+  counter-increment: know;
+}
+.know__list li::before {
+  content: counter(know, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1.45rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+@media (min-width: 900px) {
+  .know__list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 4rem; }
+}
+
+/* 8. Enquiry ------------------------------------------------------------ */
+.enquiry__intro { max-width: 36rem; margin-bottom: 2.5rem; }
+.enquiry__layout { display: grid; gap: 2.5rem; }
+@media (min-width: 900px) {
+  .enquiry__layout { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 4rem; align-items: start; }
+}
+
+.form { display: grid; gap: 1.25rem; }
+.form__hp { display: none; }
+.form__note { margin: 0; font-size: 0.875rem; color: var(--text-muted); }
+.field { display: grid; gap: 0.4rem; }
+.field label { font-size: 0.9375rem; font-weight: 500; }
+.field-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem; /* ≥16px avoids iOS zoom on focus */
+  line-height: 1.4;
+}
+.field textarea { min-height: 8rem; resize: vertical; }
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231c2420' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 1.1rem;
+}
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible { outline-offset: 1px; border-color: var(--accent); }
+
+.field--check {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.75rem;
+}
+.field--check input {
+  width: 1.5rem;
+  height: 1.5rem;
+  min-height: 0;
+  margin: 0.1rem 0 0;
+  padding: 0;
+  accent-color: var(--accent);
+}
+.field--check label { font-weight: 400; line-height: 1.5; }
+
+.form__status { margin: 0; min-height: 1.5em; font-size: 0.9375rem; }
+.form__status.is-error { color: var(--error); font-weight: 500; }
+
+.form-success {
+  padding: 2rem 1.5rem;
+  background: var(--bg);
+  border-top: 3px solid var(--accent);
+}
+.form-success h3 { font-size: 2rem; margin-bottom: 0.75rem; }
+.form-success p { margin: 0; }
+.form-success:focus { outline: none; }
+.form-success:focus-visible { outline: 3px solid var(--focus); }
+
+.contact-alt { padding: 2rem 1.5rem; background: var(--bg); }
+.contact-alt h3 { font-size: 1.75rem; margin-bottom: 1.25rem; }
+.contact-alt__airbnb-intro {
+  margin: 2rem 0 0.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+}
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.75rem;
+  font-weight: 500;
+}
+.link-arrow .icon { width: 1.1rem; height: 1.1rem; }
+
+/* 9. Footer ------------------------------------------------------------- */
+.site-footer {
+  padding-block: 3rem 2.5rem;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: 0.9375rem;
+}
+.site-footer__inner { display: grid; gap: 0.35rem; }
+.site-footer p { margin: 0; }
+.site-footer__brand { font-family: var(--font-serif); font-size: 1.625rem; line-height: 1.2; }
+.site-footer__legal { letter-spacing: 0.02em; }
+.nowrap { white-space: nowrap; }
+.site-footer__copy { margin-top: 1rem !important; color: var(--footer-muted); font-size: 0.875rem; }
+.site-footer :focus-visible { outline-color: var(--footer-text); }
+.privacy { margin-top: 0.75rem; }
+.privacy summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  color: var(--footer-text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+  list-style: none;
+}
+.privacy summary::-webkit-details-marker { display: none; }
+.privacy summary::after { content: "+"; text-decoration: none; display: inline-block; }
+.privacy[open] summary::after { content: "−"; }
+.privacy__body { max-width: 44rem; padding-block: 0.25rem 0.5rem; color: var(--footer-muted); }
+.privacy__body p + p { margin-top: 0.75em; }
+
+/* Lightbox -------------------------------------------------------------- */
+.lightbox {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  inset: 0;
+  overflow: hidden;
+  background: rgb(14 17 15 / 0.97);
+  color: #fff;
+}
+.lightbox[open] { display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.lightbox::backdrop { background: rgb(0 0 0 / 0.6); }
+.lightbox__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 4rem 0.5rem 0.5rem;
+  touch-action: pan-y pinch-zoom;
+}
+.lightbox__img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 9.5rem);
+  max-height: calc(100dvh - 9.5rem);
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.lightbox__counter {
+  margin: 0;
+  padding: 1.6rem 0 1.9rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-align: center;
+  color: rgb(255 255 255 / 0.85);
+}
+.lightbox__btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+.lightbox__btn:hover { background: rgb(255 255 255 / 0.2); }
+.lightbox :focus-visible { outline-color: #fff; }
+.lightbox__close { top: 0.75rem; right: 0.75rem; }
+.lightbox__prev { left: 1rem; bottom: 1rem; }
+.lightbox__next { right: 1rem; bottom: 1rem; }
+@media (min-width: 900px) {
+  .lightbox__stage { padding: 4rem 5.5rem 0.5rem; }
+  .lightbox__prev, .lightbox__next { top: 50%; bottom: auto; transform: translateY(-50%); }
+  .lightbox__prev { left: 1.25rem; }
+  .lightbox__next { right: 1.25rem; }
+}
+
+/* Scroll reveal (only when motion is allowed; JS adds .is-hidden) -------- */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] { transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  [data-reveal].is-hidden { opacity: 0; transform: translateY(1.25rem); }
+}
