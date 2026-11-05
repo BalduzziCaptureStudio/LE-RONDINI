@@ -138,8 +138,8 @@
       "title": "Informativa privacy",
       "paragraphs": [
         "I dati che invii con il modulo (nome, email, telefono se indicato, date, numero di ospiti e messaggio) sono usati esclusivamente per rispondere alla tua richiesta. Non li cediamo a terzi e non li usiamo per newsletter o pubblicità.",
-        "Il modulo è gestito da Netlify, il servizio che ospita questo sito, che conserva i messaggi per nostro conto. Conserviamo i dati per [PLACEHOLDER: periodo di conservazione, es. 12 mesi] dall'ultimo contatto.",
-        "Titolare del trattamento: [PLACEHOLDER: nome e cognome], [PLACEHOLDER: email]. Puoi chiedere in qualsiasi momento di consultare, correggere o cancellare i tuoi dati scrivendo a questo indirizzo.",
+        "Il modulo è gestito da Netlify, il servizio che ospita questo sito, che conserva i messaggi per nostro conto. Conserviamo i dati per 12 mesi dall'ultimo contatto.",
+        "Titolare del trattamento: Davide Balduzzi, davide.balduzzi89@gmail.com. Puoi chiedere in qualsiasi momento di consultare, correggere o cancellare i tuoi dati scrivendo a questo indirizzo.",
         "Questo sito non usa cookie né strumenti di tracciamento: ricorda soltanto, nel tuo browser, la lingua che hai scelto. Se ci contatti tramite WhatsApp o Airbnb valgono le loro informative."
       ]
     },
@@ -342,8 +342,8 @@
       "title": "Privacy note",
       "paragraphs": [
         "The details you send with the form (name, email, phone if given, dates, number of guests and message) are used only to reply to your enquiry. We don't share them with third parties or use them for newsletters or advertising.",
-        "The form is handled by Netlify, the service that hosts this website, which stores the messages on our behalf. We keep the data for [PLACEHOLDER: retention period, e.g. 12 months] after our last contact.",
-        "Data controller: [PLACEHOLDER: full name], [PLACEHOLDER: email]. You can ask at any time to see, correct or delete your data by writing to this address.",
+        "The form is handled by Netlify, the service that hosts this website, which stores the messages on our behalf. We keep the data for 12 months after our last contact.",
+        "Data controller: Davide Balduzzi, davide.balduzzi89@gmail.com. You can ask at any time to see, correct or delete your data by writing to this address.",
         "This website uses no cookies or tracking tools: it only remembers, in your browser, the language you chose. If you contact us via WhatsApp or Airbnb, their privacy policies apply."
       ]
     },
